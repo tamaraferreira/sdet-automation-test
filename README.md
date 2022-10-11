@@ -43,3 +43,5 @@ reach out, so we know what is happening instead of think that you are not intere
 ## Deliverables:
 * Code in a public Github repo
 * README file with the notes, documentation, and instructions related to the code developed
+* Have an option to parametrize the test cases (i.e. We can execute only the frontend, only the nasa API, or both tests)
+* Generate a report with the tests execution, and for the frontend, attach a screenshot of the page in case of a failure
