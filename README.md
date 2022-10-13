@@ -1,11 +1,11 @@
 # sdet-automation-test
 ## What is Expected?
 This is a code challenge to test your skills related to the development of automated tests. We use pytest with python, 
-and allure for the reports, but feel free to use what you are comfortable with. 
+and allure for the reports, but feel free to use any framework or language you are comfortable with. 
 
-This set of tests consists on two parts, one for a frontend test, and other for an API.
+The test consists in some steps to interact with a web page and assert some conditions, generating a report with the test result after the execution.
 
-## First Scenario - Front End test
+## Test Scenario - Front End test
 For this test you should follow the steps:
 1. Go to https://www.amazon.com and expand the 'All' hamburger menu
 
@@ -22,18 +22,10 @@ For this test you should follow the steps:
 5. Sort by Price: High to Low
 
 ![](./imgs/img_5.jpg)
-6. For the products that are currently available, open the third one
-7. Check the review score. If it's less than 4, fail the test, otherwise pass it
-8. Check the price for the opened item. If it's more than $4000, fail the test, otherwise pass it
-9. Generate a report with the test result
-
-## Second Scenario - API
-NASA has an open API: https://api.nasa.gov/index.html#getting-started. Test the following scenarios
-1. Query the Astronomy Picture of the Day with 5 images. See if the return has 5 entries in it.
-2. Query the Astronomy Picture of the Day from 2022-05-05 to 2022-05-20. See if the return has 16 entries in it.
-3. Create some integration scenarios to test edge, valid, and invalid scenarios for the Astronomy Picture of the Day API
-
-Note: For all above tests, save all the results that doesn't have copyright to a json file under an output folder
+6. For the products that are currently available, open the third one.
+7. Check the review score. If it's less than 4, fail the test, otherwise pass it.
+8. Check the price for the opened item. If it's more than $4000, fail the test, otherwise pass it.
+9. Generate a report with the test result. In case of failure, attach a screenshot of the current page in the report.
 
 ## Repository
 You will need to fork the repository and build the solution in Github publicly. Once you are finished, share your
@@ -41,7 +33,7 @@ repository with us. We expect this to be finished in one week, but if anything h
 reach out, so we know what is happening instead of think that you are not interested in this position anymore. 
 
 ## Deliverables:
-* Code in a public Github repo
+* Code in a public Github repository
 * README file with the notes, documentation, and instructions related to the code developed
-* Have an option to parametrize the test cases (i.e. We can execute only the frontend, only the nasa API, or both tests)
-* Generate a report with the tests execution, and for the frontend, attach a screenshot of the page in case of a failure
+* The test execution should do the above steps and generate a report with the tests results. In case of a test failure, it should also attach a screenshot of the current page when the test failed.
+* Have the test parametrized so we can choose if we want to run it in headless mode or not.
