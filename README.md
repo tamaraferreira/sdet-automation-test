@@ -1,7 +1,8 @@
 # sdet-automation-test
 ## What is Expected?
 This is a code challenge to test your skills related to the development of automated tests. We use pytest with python, 
-and allure for the reports, but feel free to use any framework or language you are comfortable with. 
+and allure for the reports, but feel free to use any framework you are familiar with, as long as you develop it using 
+Python. 
 
 The test consists in some steps to interact with a web page and assert some conditions, generating a report with the test result after the execution.
 
