@@ -16,10 +16,15 @@ For this test you should follow the steps:
 2. Search for "**book {BOOK_NAME}**" (e.g: The miserable, Blindness...).
 3. Select Shopping.
 4. Choose prices **High to Low**.
+
 ![](./imgs/1.png)
+
 5. Define pricing up to **{AMOUNT}**. (e.g: 1000 or another real value, as currency might differ from running location).
+
 ![](./imgs/2.png)
+
 6. From the second listed product **with rating**, confirm it has rating bigger or equal to **{RATING}**. (e.g: 4.5, 3.9)
+
 ![](./imgs/3.png)
 
 ### Implementation Requirements
