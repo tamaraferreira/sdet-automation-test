@@ -1,5 +1,5 @@
 # sdet-automation-test
-#### Version: 2.0
+#### Version: 2.1
 
 ### What is Expected?
 This is a code challenge to test your skills related to the development of automated tests. We use Pytest with Python, 
@@ -32,13 +32,22 @@ For this test you should follow the steps:
 2. If possible, use [Fixtures](https://docs.pytest.org/en/stable/how-to/fixtures.html) (or something like) to go to the
 page and perform the search (i.e. first three steps).
 
+### Bypass Robot
+Google has included a robot blocker with manual captcha.
+
+There are two ways to bypass:
+1. As this is not the purpose of this challenge, you may add a **sleep** and we will manually solve the captcha
+when needed.
+2. You may add this to the Options: ``options.debugger_address = "127.0.0.1:9222"`` and raise chrome with debug mode:
+``chrome.exe --remote-debugging-port=9222 --user-data-dir=remote-debug-profile``
+
 ## Repository
 You will need to fork the repository and build the solution in Github publicly. Once you are finished, share your
 repository with us. 
 
 We expect this to be finished in one week  (in fact, some dedicated hours might be enough), but if anything happens
 and this deadline cannot be met, reach out, so we know what is happening instead of think that you are not interested
-in this position anymore. 
+in this position anymore.
 
 ## Deliverables
 * Code in a public Github repository.
