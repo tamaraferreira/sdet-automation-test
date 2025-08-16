@@ -1,57 +1,27 @@
-# sdet-automation-test
-#### Version: 2.1
+# Technical Evaluation for Swapcard
 
-### What is Expected?
-This is a code challenge to test your skills related to the development of automated tests. We use Pytest with Python, 
-and Allure for the reports, but feel free to use any framework you are familiar with, as long as you develop it using 
-Python.
+This repository contains a test automation that performs a Books search on Google, visits the shopping tab, applies value filters and display order filters, shows the product, and checks if the second product with a review matches the test data. It was developed in Python with Selenium Webdriver, and the report is generated with Allure Reports.
 
-The test consists in some steps to interact with a web page and assert some conditions, generating a report with the
-test result after the execution.
+## Requirements
+- Python 3.10+;
+- ``pip`` - Python Index Package;
+- Chrome installed;
 
-## Test Scenario
+## Setup and run automation
+- Clone this repository:
+  ``git clone https://github.com/tamaraferreira/sdet-automation-test.git``
+- On the terminal:
+  ``cd sdet-automation-test``
+- Setup the virtual environment with the following commands:
+  - To create virtual environment: 
+      - For Windows: ``python -m venv venv``
+      - For Linux/Mac: ``source venv/bin/activate``
 
-For this test you should follow the steps:
-1. Go to [google.com](https://www.google.com).
-2. Search for "**book {BOOK_NAME}**" (e.g: The miserable, Blindness...).
-3. Select Shopping.
-4. Choose prices **High to Low**.
-
-![](./imgs/1.png)
-
-5. Define pricing up to **{AMOUNT}**. (e.g: 1000 or another real value, as currency might differ from running location).
-
-![](./imgs/2.png)
-
-6. From the second listed product **with rating**, confirm it has rating bigger or equal to **{RATING}**. (e.g: 4.5, 3.9)
-
-![](./imgs/3.png)
-
-### Implementation Requirements
-1. Use data [parametrization](https://docs.pytest.org/en/stable/example/parametrize.html), instead hard coded data.
-2. If possible, use [Fixtures](https://docs.pytest.org/en/stable/how-to/fixtures.html) (or something like) to go to the
-page and perform the search (i.e. first three steps).
-
-### Bypass Robot
-Google has included a robot blocker with manual captcha.
-
-There are two ways to bypass:
-1. As this is not the purpose of this challenge, you may add a **sleep** and we will manually solve the captcha
-when needed.
-2. You may add this to the Options: ``options.debugger_address = "127.0.0.1:9222"`` and raise chrome with debug mode:
-``chrome.exe --remote-debugging-port=9222 --user-data-dir=remote-debug-profile``
-
-## Repository
-You will need to fork the repository and build the solution in Github publicly. Once you are finished, share your
-repository with us. 
-
-We expect this to be finished in one week  (in fact, some dedicated hours might be enough), but if anything happens
-and this deadline cannot be met, reach out, so we know what is happening instead of think that you are not interested
-in this position anymore.
-
-## Deliverables
-* Code in a public Github repository.
-* README.md file with the notes, documentation, and instructions related to the code developed.
-* The test execution should do the above steps and generate a report with the tests results. In case of a test failure,
-it should also attach a screenshot of the current page when the test failed.
-* Have the test parametrized so we can choose if we want to run it in headless mode or not.
+  
+  - To activate virtual environment: ``venv\Scripts\activate``
+  
+  
+- Install dependencies: ``pip install -r requirements.txt``
+- **Run tests:** ``pytest``
+- Run tests in headless mode: ``pytest --headless true``
+- The reports are generated after each execution. To open the reports in the browser, use teh command: ``allure open allure-report``.
